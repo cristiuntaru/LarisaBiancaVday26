@@ -264,10 +264,10 @@ copyBtn.addEventListener("click", async () => {
     .join("\n\n");
   try{
     await navigator.clipboard.writeText(letterText);
-    resultBox.textContent = "📋 Scrisoarea a fost copiată.";
+    resultBox.textContent = "";
     fireConfetti(35);
   } catch(e){
-    resultBox.textContent = "📋 Nu pot copia automat (browser). Selectează manual textul.";
+    resultBox.textContent = "";
   }
 });
 
@@ -279,4 +279,5 @@ sealBtn.addEventListener("click", () => {
 
 // ====== Personalization quick edit (optional) ======
 signatureEl.textContent = "Cristian"; // schimbă cu numele tău
+
 
