@@ -273,9 +273,10 @@ copyBtn.addEventListener("click", async () => {
 
 // ====== Seal (cute) ======
 sealBtn.addEventListener("click", () => {
-  resultBox.textContent = "💗 Sigilat. Acum e oficial: ai un loc în inima mea.";
+  resultBox.textContent = "";
   fireConfetti(90);
 });
 
 // ====== Personalization quick edit (optional) ======
 signatureEl.textContent = "Cristian"; // schimbă cu numele tău
+
