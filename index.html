@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Larisa Bianca</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💘</text></svg>">
+  <meta name="theme-color" content="#ff4d6d" />
+</head>
+<body>
+  <!-- Ambient background -->
+  <div class="bg-gradient"></div>
+  <canvas id="heartsCanvas" aria-hidden="true"></canvas>
+
+  <!-- Floating UI -->
+  <header class="topbar">
+    <div class="brand">💘 Valentine's Day 2026</div>
+    <div class="top-actions">
+      <button class="pill" id="btnMusic" title="Pornește/Oprește muzica">🎵 Muzică</button>
+      <button class="pill" id="btnSparkle" title="Presară magie">✨ Magie</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="card hero">
+      <div class="hero-text">
+        <p class="eyebrow">Hei, iubirea mea…</p>
+        <h1 id="headline">Am realizat un mic cadou pentru tine 🌙</h1>
+        <p class="sub" id="subline">
+          Un gest mic, special, cu multă dragoste.
+        </p>
+
+        <div class="cta-row">
+          <button class="btn primary" id="btnOpenLetter">💌 Deschide scrisoarea</button>
+          <button class="btn ghost" id="btnScroll">⬇️ Continuă</button>
+        </div>
+
+
+      </div>
+
+      <div class="hero-media">
+        <div class="polaroid tilt" id="heroPolaroid">
+          <img src="assets/hero.gif" alt="Gif drăguț de Valentine" />
+          <div class="polaroid-caption">„Tu ești acasă.”</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER MODAL -->
+    <section class="modal" id="letterModal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+        <div class="modal-top">
+          <h2 id="letterTitle">💌 Scrisoare pentru tine</h2>
+          <button class="icon-btn" id="btnCloseLetter" aria-label="Închide">✕</button>
+        </div>
+
+        <div class="letter">
+          <p>Dragă Larisa <span class="inline-heart">♥</span>,</p>
+
+          <p>
+            Mi-ar fi plăcut să am așa dezvoltată latura creativă ca și tine, dar fiind la informatică, am zis să beneficiez la maximum de avantajele pe care le are domeniul.
+          </p>
+
+          <p>
+            O simplă scrisoare nu e de ajuns pentru a-mi exprima sentimentele față de tine. Când te văd, simt bucurie, dragoste și o emoție profundă.
+          </p>
+
+          <p>
+            Îmi place cum râzi, cum te luminezi când îți povestești ideile și cum reușești să transformi o zi obișnuită într-una specială fără să-ți dai seama. Mă inspiri să fiu mai bun, mai atent și mai prezent.
+          </p>
+
+          <p>
+            La mulți ani de Sfântul Valentin, iubita mea. <br />
+            <strong>Îți mulțumesc că exiști.</strong>
+          </p>
+
+          <p class="sig">- Al tău, <span id="signature">[Numele tău]</span> 💘</p>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn primary" id="btnSeal">💗 Sigilează cu un sărut</button>
+          <button class="btn ghost" id="btnCopy">📋 Copiază textul</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+      <div class="section-title">
+        <h2>📸 Colaj cu noi</h2>
+        <p>Câteva dintre pozele mele preferate:</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot">
+          <img src="assets/pic1.jpeg" alt="Amintire 1" />
+          <figcaption>Momentul când ne-am cunoscut 💫</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/pic2.jpeg" alt="Amintire 2" />
+          <figcaption>Nu uităm niciodată cum e să fim copii 🧒👧</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/pic3.jpeg" alt="Amintire 3" />
+          <figcaption>Mereu la înălțime 🧗🏼</figcaption>
+        </figure>
+        <figure class="shot wide">
+          <img src="assets/gif1.gif" alt="Gif drăguț" />
+          <figcaption>Vibe-ul nostru în 5 secunde 😄</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="card">
+      <div class="section-title">
+        <h2>🗓️ Povestea noastră</h2>
+        <p>Cele mai importante trei momente:</p>
+      </div>
+
+      <ol class="timeline" id="timeline">
+        <li>
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Prima dată când ne-am întâlnit</h3>
+            <p>La început am crezut că nu o să fim mai mult decât prieteni. Însă ne-am atașat rapid. Și am văzut că ne completăm unul pe altul.</p>
+            <span class="tag">✨ beggining</span>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Cea mai mare provocare</h3>
+            <p>Decizia de a merge împreună într-o direcție necunoscută: în America. Nu a fost ușor. Au fost și momente rele și bune, dar am învățat că dacă ne propunem ceva, împreună putem realiza orice.</p>
+            <span class="tag">🏆 challange</span>
+          </div>
+        </li>
+        <li>
+          <div class="dot"></div>
+          <div class="content">
+            <h3>Prezentul</h3>
+            <p>Mai avem multe provocări care ne așteaptă. Sunt curios ce ne va aduce viitorul și sunt sigur că împreună vom face față tuturor provocărilor.</p>
+            <span class="tag">💘 present</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- THE QUESTION -->
+    <section class="card big-question" id="questionSection">
+      <h2>Am o întrebare importantă…</h2>
+      <p class="sub">Vrei să fii Valentine-ul meu? 🥹</p>
+
+      <div class="answer-row">
+        <button class="btn primary jumbo" id="btnYes">DA 💖</button>
+        <button class="btn danger jumbo" id="btnNo">NU 🙈</button>
+      </div>
+
+      <div class="result" id="resultBox" aria-live="polite"></div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Făcut cu ❤️, <span class="tiny">dragoste și emoție.</span>
+      </p>
+    </footer>
+  </main>
+
+  <!-- optional audio (you add assets/music.mp3) -->
+  <audio id="bgm" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
